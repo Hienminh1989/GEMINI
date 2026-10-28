@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <!-- Sky Blue Outer Circle -->
+  <circle cx="250" cy="250" r="246" fill="#3ca5fc" />
+
+  <!-- Inner White Disc -->
+  <circle cx="250" cy="250" r="162" fill="#ffffff" />
+
+  <!-- Left Medical Cross (Red) -->
+  <g fill="#ff3344">
+    <rect x="16" y="242" width="40" height="16" rx="2" />
+    <rect x="28" y="230" width="16" height="40" rx="2" />
+  </g>
+
+  <!-- Right Medical Cross (Red) -->
+  <g fill="#ff3344">
+    <rect x="444" y="242" width="40" height="16" rx="2" />
+    <rect x="456" y="230" width="16" height="40" rx="2" />
+  </g>
+
+  <!-- Top Text: BỆNH VIỆN ĐA KHOA THIỆU HOÁ -->
+  <g>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-67.00, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">B</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-61.85, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">Ệ</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-56.69, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">N</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-51.54, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">H</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-41.23, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">V</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-36.08, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">I</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-30.92, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">Ệ</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-25.77, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">N</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-15.46, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">Đ</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-10.31, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">A</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(0.00, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">K</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(5.15, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">H</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(10.31, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">O</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(15.46, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">A</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(25.77, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">T</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(30.92, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">H</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(36.08, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">I</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(41.23, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">Ệ</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(46.38, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">U</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(56.69, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">H</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(61.85, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">O</text>
+    <text x="250" y="46.0" text-anchor="middle" dominant-baseline="central" transform="rotate(67.00, 250, 250)" font-size="23.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">Á</text>
+  </g>
+
+  <!-- Bottom Text: THIEU HOA GENRAL HOSPITAL -->
+  <g>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-58.00, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">T</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-53.17, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">H</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-48.33, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">I</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-43.50, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">E</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-38.67, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">U</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-29.00, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">H</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-24.17, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">O</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-19.33, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">A</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-9.67, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">G</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(-4.83, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">E</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(0.00, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">N</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(4.83, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">R</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(9.67, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">A</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(14.50, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">L</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(24.17, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">H</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(29.00, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">O</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(33.83, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">S</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(38.67, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">P</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(43.50, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">I</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(48.33, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">T</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(53.17, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">A</text>
+    <text x="250" y="456.0" text-anchor="middle" dominant-baseline="central" transform="rotate(58.00, 250, 250)" font-size="21.5" font-weight="900" fill="#ffe500" stroke="#c99700" stroke-width="0.5" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif">L</text>
+  </g>
+
+  <!-- Red Heart in Center -->
+  <path d="M 250 142 
+           C 250 115, 222 92, 192 104 
+           C 162 116, 155 152, 175 188 
+           C 195 224, 235 252, 250 264 
+           C 265 252, 305 224, 325 188 
+           C 345 152, 338 116, 308 104 
+           C 278 92, 250 115, 250 142 Z" 
+        fill="#ff3355" />
+
+  <!-- Stylized Green Caring Hands -->
+  <!-- Left Hand -->
+  <path d="M 198 362 
+           C 198 335, 185 290, 168 260 
+           C 152 230, 130 198, 118 180 
+           C 114 175, 115 182, 119 190 
+           C 128 210, 150 248, 166 268 
+           C 158 240, 160 222, 167 214 
+           C 169 212, 172 215, 174 224 
+           C 185 255, 205 285, 234 292 
+           C 236 293, 235 298, 229 302 
+           C 219 312, 224 335, 225 362 Z" 
+        fill="#39e75f" />
+
+  <!-- Right Hand (Mirror of Left Hand) -->
+  <path d="M 302 362 
+           C 302 335, 315 290, 332 260 
+           C 348 230, 370 198, 382 180 
+           C 386 175, 385 182, 381 190 
+           C 372 210, 350 248, 334 268 
+           C 342 240, 340 222, 333 214 
+           C 331 212, 328 215, 326 224 
+           C 315 255, 295 285, 266 292 
+           C 264 293, 265 298, 271 302 
+           C 281 312, 276 335, 275 362 Z" 
+        fill="#39e75f" />
+
+  <!-- Text: TH-2006 below the hands -->
+  <text x="250" y="398" font-family="'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#d93856" text-anchor="middle" letter-spacing="1">
+    TH-2006
+  </text>
+</svg>

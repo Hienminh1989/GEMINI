@@ -1,0 +1,11 @@
+{
+  "name": "Chấm Công GPS",
+  "description": "Ứng dụng điểm danh tại Bệnh viện đa khoa Thiệu Hóa.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

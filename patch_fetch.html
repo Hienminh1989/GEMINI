@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      const originalDefineProperty = Object.defineProperty;
+      Object.defineProperty = function(obj, prop, descriptor) {
+        if (obj === window && prop === 'fetch' && descriptor.get && !descriptor.set) {
+          descriptor.set = function(val) {
+            // allow setting fetch
+            delete window.fetch;
+            window.fetch = val;
+          };
+          descriptor.configurable = true;
+        }
+        return originalDefineProperty(obj, prop, descriptor);
+      };
+    </script>
+    <meta charset="UTF-8" />
+...

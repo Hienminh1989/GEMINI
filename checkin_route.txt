@@ -1,0 +1,151 @@
+471:app.post("/api/attendance", async (req, res) => {
+472-  try {
+473-    const { 
+474-      userId, userName, department, type, location, deviceInfo, reason 
+475-    } = req.body;
+476-    
+477-    // SERVER TIME IS THE SINGLE SOURCE OF TRUTH
+478-    const now = new Date();
+479-    const serverTimestamp = now.getTime();
+480-    
+481-    // 1. Fetch Config
+482-    const configResult = await client.query("SELECT data FROM settings WHERE id = 'config'");
+483-    let config = {
+484-        morningStart: '07:00',
+485-        morningEnd: '11:20',
+486-        afternoonStart: '13:30',
+487-        afternoonEnd: '17:00',
+488-        radius: 600,
+489-        targetLat: 19.866034,
+490-        targetLng: 105.656531
+491-    };
+492-    if (configResult.rows.length > 0) {
+493-        config = { ...config, ...configResult.rows[0].data };
+494-    }
+495-
+496-    // 2. Validate Location (GPS check on server)
+497-    const distance = getDistance(
+498-      { latitude: Number(location.lat), longitude: Number(location.lng) },
+499-      { latitude: Number(config.targetLat), longitude: Number(config.targetLng) }
+500-    );
+501-    const maxRadius = Number(config.radius) || 600;
+502-    
+503-    if (distance > maxRadius) {
+504-        // Save to attendance_failed
+505-        const dateStr = format(now, 'yyyy-MM-dd');
+506-        await client.query(
+507-          `INSERT INTO attendance_failed 
+508-            (user_id, user_name, department, timestamp, date_str, status, type, location, device_info, reason)
+509-           VALUES 
+510-            ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+511-          [userId, userName, department, serverTimestamp, dateStr, 'out_of_range', type, location, deviceInfo, reason || '']
+512-        );
+513-        return res.status(400).json({ 
+514-            error: `Vị trí của bạn (${Math.round(distance)}m) vượt quá khoảng cách cho phép (${maxRadius}m).`,
+515-            status: 'out_of_range',
+516-            distance
+517-        });
+518-    }
+519-
+520-    // 3. Resolve Effective Schedule
+521-    let isNuoiConNho = false;
+522-    let customStart = null;
+523-    let customEnd = null;
+524-    let earlyLeaveMinutes = 0;
+525-
+526-    const specialResult = await client.query("SELECT * FROM special_employees WHERE user_name = $1 AND department = $2", [userName, department]);
+527-    if (specialResult.rows.length > 0) {
+528-        // We take the first valid one, or just the first one as currently implemented
+529-        const specialEmp = specialResult.rows[0];
+530-        // TODO: check valid_from, valid_until if needed. For now assuming active.
+531-        const isActive = true; 
+532-        if (isActive) {
+533-            if (specialEmp.employee_type?.toLowerCase().includes('nuôi con nhỏ')) {
+534-                isNuoiConNho = true;
+535-                earlyLeaveMinutes = specialEmp.early_minutes || 30;
+536-            } else {
+537-                customStart = specialEmp.custom_start_time;
+538-                customEnd = specialEmp.custom_end_time;
+539-            }
+540-        }
+541-    }
+542-
+543-    // Determine shift
+544-    const hour = now.getHours();
+545-    let shift = 'morning';
+546-    let shiftDate = now;
+547-    if (hour >= 12 && hour < 18) shift = 'afternoon';
+548-    else if (hour >= 18) shift = 'evening';
+549-
+550-    let dateStr = format(shiftDate, 'yyyy-MM-dd');
+551-    let lateMinutes = 0;
+552-    let greetingMsg = '';
+553-
+554-    // If custom schedule, override shift logic if it's overnight
+555-    if (customStart && customEnd) {
+556-        const [sH] = customStart.split(':').map(Number);
+557-        const [eH] = customEnd.split(':').map(Number);
+558-        // It's a night shift crossing midnight if start hour > end hour
+559-        if (sH > eH) {
+560-            shift = 'night';
+561-            if (hour < eH + 4) { // Still in the morning of the next day, belongs to yesterday's shift
+562-                shiftDate = new Date(now.getTime() - 24 * 3600 * 1000);
+563-                dateStr = format(shiftDate, 'yyyy-MM-dd');
+564-            }
+565-        }
+566-    }
+567-
+568-    if (type === 'in') {
+569-        let startStr = shift === 'morning' ? config.morningStart : (shift === 'afternoon' ? config.afternoonStart : '18:00');
+570-        if (customStart) {
+571-            startStr = customStart;
+572-        }
+573-
+574-        const [startH, startM] = startStr.split(':').map(Number);
+575-        const startTime = new Date(shiftDate);
+576-        startTime.setHours(startH, startM, 0, 0);
+577-
+578-        if (now <= startTime) {
+579-            greetingMsg = shift === 'morning' 
+580-                ? 'Chấm đúng giờ! Chúc bạn một ngày làm việc tuyệt vời!' 
+581-                : 'Chấm đúng giờ! Chúc bạn làm việc hiệu quả!';
+582-        } else {
+583-            lateMinutes = Math.floor((now.getTime() - startTime.getTime()) / 60000);
+584-            greetingMsg = `Chấm vào thành công. Bạn đi muộn ${lateMinutes} phút.`;
+585-        }
+586-    } else if (type === 'out') {
+587-        let endStr = shift === 'morning' ? config.morningEnd : config.afternoonEnd;
+588-        
+589-        if (customEnd) {
+590-            endStr = customEnd;
+591-        }
+592-
+593-        const [endH, endM] = endStr.split(':').map(Number);
+594-        const endTime = new Date(now); // use current day for end time unless we span over midnight
+595-        
+596-        if (customStart && customEnd) {
+597-            const [sH] = customStart.split(':').map(Number);
+598-            // If overnight, and we are in the morning hours, we set the date properly
+599-            if (sH > endH && hour < endH + 4) {
+600-               // already on the correct day for end time
+601-            } else if (sH > endH && hour >= sH - 2) {
+602-               // if they checkout early the same day they started the night shift
+603-               endTime.setDate(endTime.getDate() + 1);
+604-            }
+605-        }
+606-        
+607-        endTime.setHours(endH, endM, 0, 0);
+608-
+609-        if (isNuoiConNho) {
+610-            endTime.setMinutes(endTime.getMinutes() - earlyLeaveMinutes);
+611-        }
+612-
+613-        if (now < endTime) {
+614-            const ca = shift === 'morning' ? 'sáng' : (shift === 'afternoon' ? 'chiều' : 'ca');
+615-            return res.status(400).json({ 
+616-                error: `Chưa đến giờ tan ca ${ca}! Bạn được phép chấm ra từ ${format(endTime, 'HH:mm')}.`,
+617-                status: 'early_out'
+618-            });
+619-        }
+620-        greetingMsg = 'Đã ra ca thành công.';
+621-    }

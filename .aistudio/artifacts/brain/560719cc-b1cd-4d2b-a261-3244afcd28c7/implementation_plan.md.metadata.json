@@ -1,0 +1,6 @@
+{
+  "summary":  "Kế hoạch nâng cấp tính năng Xuất Báo Cáo Excel và danh sách Điểm danh: gộp chung toàn bộ nhân viên Đã điểm danh và Chưa điểm danh vào một bảng duy nhất, tự động lọc bỏ các tài khoản Admin và nhân sự đã khóa/nghỉ việc, đồng thời thiết kế lại bố cục bảng Excel chuẩn hành chính bệnh viện để xem rõ chi tiết từng người và trạng thái.",
+  "updatedAt":  "2026-10-28T01:35:00.497922644Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}
